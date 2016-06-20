@@ -1,4 +1,4 @@
-// Tim's keymap for the GRID-layout Planck
+// Tim's keymap for the GRID-layout Planck with MX Lockswitch at bottom left corner
 
 #include "planck.h"
 #include "action.h"
@@ -42,7 +42,8 @@ extern keymap_config_t keymap_config;
 
 // Keymap definitions
 #define RSPC_KEY KC_0
-#define RCADET MT(MOD_LSFT, RSFT(KC_RPRN))
+#define RCADET MT(MOD_LSFT, KC_RPRN) //Attempt to fix RSPC
+#define CADEL LCTL(LALT(KC_DEL)) 
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -115,7 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = {
   {KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LBRC, KC_RBRC, KC_BSPC},
   {_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MINS, KC_EQL,  KC_LCBR, KC_RCBR, KC_PIPE},
-  {_______, BL_TOGG, BL_DEC,  BL_INC,  XXXXXXX, XXXXXXX, XXXXXXX, KC_UNDS, KC_PLUS, XXXXXXX, KC_RPRN, _______},
+  {_______, BL_TOGG, BL_DEC,  BL_INC,  CADEL,   XXXXXXX, XXXXXXX, KC_UNDS, KC_PLUS, XXXXXXX, KC_RPRN, _______},
   {_______, _______, _______, _______, _______, _______, _______, _______, KC_END,  KC_PGDN, KC_PGUP, KC_MPLY}
 },
 
